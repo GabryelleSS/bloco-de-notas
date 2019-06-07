@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body.--is-active {
+    background-color: #d0d0d0;
+}
+
 header {
     background-color: #FF6D4F;
     display: flex;
@@ -11,8 +15,12 @@ header {
 }
 
 header h1 {
-    margin: 40px 100px;
     font-size: 70px;
+    margin: 40px 100px;
+}
+
+header h1 i {
+    padding-right: 20px;
 }
 
 header .nav-bar {
@@ -29,8 +37,7 @@ header li {
     padding-left: 70px;
 }
 
-li:first-child {
-    /* border: 3px solid red; */
+li:first-child { 
     cursor: pointer;
     padding: 0;
 }
@@ -50,18 +57,22 @@ main .text-field {
 }
 
 main textarea {
-    font-size: 30px;
-    height: 10em;
+    border: none;
+    font-size: 3em;
+    height: 3em;
+    padding: 10px 30px;
+    resize: none;
     width: 70em;
 }
 
 main .btn-save {
-    border: 5px solid #FF6D4F;
+    background: none;
+    border: 5px solid #461d14;
     border-radius: 10px;
+    color: #461d14;
+    display: block;
     font-size: 40px;
     padding: 20px 40px;
     margin-top: 40px;
-    background: none;
-    display: block;
     margin: 30px auto 0;
 }
