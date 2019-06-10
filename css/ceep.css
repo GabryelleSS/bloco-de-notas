@@ -16,7 +16,7 @@ header {
 
 header h1 {
     font-size: 70px;
-    margin: 40px 100px;
+    margin: 40px;
 }
 
 header h1 i {
@@ -56,6 +56,10 @@ main .text-field {
     justify-content: center;
 }
 
+main .container-text-field {
+    margin-bottom: 90px;
+}
+
 main textarea {
     border: none;
     font-size: 3em;
@@ -75,4 +79,56 @@ main .btn-save {
     padding: 20px 40px;
     margin-top: 40px;
     margin: 30px auto 0;
+}
+
+.container-notes .post-it {
+    background-color: #8a1414;
+    color: #000;
+    border-radius: 12px;
+    padding: 0px 50px;
+    text-align: justify;
+    margin: 120px 0;
+}
+
+.container-notes .btn-config-post-it{
+    padding: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -65px;
+}
+
+button.btn-config-post-it.trash {
+    background-color: orange;
+    border-radius: 50%;
+    padding: 40px;
+    left: 710px;
+    font-size: 40px;
+}
+
+.container-notes .btn-config-post-it.red {
+    border: 2px solid red;
+    background-color: #8a1414;
+    left: 470px;
+}
+
+.container-notes .btn-config-post-it.green {
+    border: 2px solid greenyellow;
+    background-color: green;
+    left: 250px;
+}
+
+.container-notes .btn-config-post-it.blue {
+    border: 2px solid rgb(0, 217, 255);
+    background-color: blue;
+    left: 29px;
+} 
+
+.container-notes .btn-config-post-it.yellow {
+    border: 2px solid yellow;
+    background-color: #b18c12;
+    left: -190px;
+} 
+
+.notes {
+    padding-bottom: 40px;
 }
