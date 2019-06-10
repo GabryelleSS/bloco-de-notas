@@ -3,10 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title>Ceep</title>
+        <link rel="icon" href="img/post-it.png">
         <link rel="stylesheet" type="text/css" href="css/ceep.css">
 
         <!-- Icons -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+        <!-- Scripts -->
+        <script src="js/ceep.js" defer></script>
     </head>
     <body>
         <header>
@@ -37,5 +41,11 @@
                 </div>
             </div>
         </main>
+
+        <script>
+            window.onload = function() {
+                ceep.init();
+            }
+        </script>
     </body>
 </html>
