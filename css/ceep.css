@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-body.--is-active {
-    background-color: #d0d0d0;
-}
-
 header {
     background-color: #FF6D4F;
     display: flex;
@@ -86,58 +82,72 @@ main .btn-save {
     background-color: #8a1414;
     border-radius: 12px;
     color: #000;
-    margin: 120px 0;
-    padding: 0px 50px;
+    margin: 90px 0;
+    padding: 50px 50px;
     text-align: justify;
 }
 
-.container-notes .btn-config-post-it{
-    border-radius: 50%;
+.container-notes .btn-config-post-it {
     display: none;
-    outline: none;
-    padding: 50px;
     position: relative;
     top: -75px;
 }
 
-.container-notes .btn-config-post-it.--is-visible{
+.container-notes .btn-config-post-it.--is-visible {
     display: block;
 }
 
-button.btn-config-post-it.trash {
+.btn-config-post-it .trash {
     background-color: darkgrey;
     border: 10px solid #8a888c;
     border-radius: 50%;
     font-size: 40px;
-    left: 695px;
-    padding: 40px;
+    left: 715px;
+    padding: 30px;
+    position: absolute;
+    top: -30px;
 }
 
-.container-notes .btn-config-post-it.red {
+.btn-config-post-it .red {
     background-color: #8a1414;
     border: 10px solid #581818;
-    left: 430px;
+    border-radius: 50%;
+    padding: 40px;
+    position: absolute;
+    left: 610px;
+    top: -15px;
 }
 
-.container-notes .btn-config-post-it.green {
+.btn-config-post-it .green {
     background-color: #3c6510;
     border: 10px solid #2f4410;
-    left: 180px;
+    border-radius: 50%;
+    padding: 40px;
+    position: absolute;
+    left: 505px;
+    top: -16px;
 }
 
-.container-notes .btn-config-post-it.blue {
+.btn-config-post-it .blue {
     background-color: #0d3e7b;
     border: 10px solid #0c284c;
-    left: -71px;
+    border-radius: 50%;
+    padding: 40px;
+    position: absolute;
+    left: 400px;
+    top: -16px;
 } 
 
-.container-notes .btn-config-post-it.yellow {
+.btn-config-post-it .yellow {
     background-color: #cea405;
     border: 10px solid #806502;
-    left: -320px;
+    border-radius: 50%;
+    padding: 40px;
+    position: absolute;
+    left: 295px;
+    top: -16px;
 } 
 
-.notes {
-    font-size: 11pt;
-    padding: 40px 0;
+p.notes {
+    padding: 20px;
 }
