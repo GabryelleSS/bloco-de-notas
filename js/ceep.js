@@ -47,7 +47,7 @@ const ceep = (function() {
             elDivPostIt.appendChild(elNotePad);
 
             function _btnConfigOn() {
-                elDivPostIt.addEventListener('click', function() {
+                elNotePad.addEventListener('click', function() {
                     elDivBtnConfig.classList.toggle('--is-visible');
                 })
             }
@@ -58,8 +58,27 @@ const ceep = (function() {
                 })
             }
 
+            function _btnChangeColor() {
+                elBtnRed.addEventListener('click', function() {
+                    elDivPostIt.style.backgroundColor = '#8a1414';
+                })
+
+                elBtnGreen.addEventListener('click', function() {
+                    elDivPostIt.style.backgroundColor = '#3c6510';
+                })
+
+                elBtnBlue.addEventListener('click', function() {
+                    elDivPostIt.style.backgroundColor = '#0d3e7b';
+                })
+
+                elBtnYellow.addEventListener('click', function() {
+                    elDivPostIt.style.backgroundColor = '#cea405';
+                })
+            }
+
             _btnConfigOn();
             _removeContainerNotes();
+            _btnChangeColor();
         })
     }
 
