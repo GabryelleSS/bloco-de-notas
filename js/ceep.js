@@ -1,90 +1,90 @@
 const ceep = (function() {
     const containerNotes = document.querySelector('.container-notes');
     const elTextNotePad = document.querySelector('textarea');
-    
-    function DrawNotepad() {
-        const btnSave = document.querySelector('.btn-save');
+    const btnSave = document.querySelector('.btn-save');
 
+    function _drawNotepad() {   
         btnSave.addEventListener('click', function() {
-            const elDivPostIt = document.createElement('div');
+            const containerNotePad = document.createElement('div');
+            containerNotePad.classList.add('container-note-pad');
+            containerNotes.appendChild(containerNotePad);
+
+            const elDivPostIt = document.createElement('textarea');
             elDivPostIt.classList.add('post-it');
-            containerNotes.appendChild(elDivPostIt);
+            containerNotePad.appendChild(elDivPostIt);
 
             const elDivBtnConfig = document.createElement('div');
             elDivBtnConfig.classList.add('btn-config-post-it');
-            elDivPostIt.appendChild(elDivBtnConfig);
+            containerNotePad.appendChild(elDivBtnConfig);
 
-            const elBtnTrash = document.createElement('button');
-            elBtnTrash.classList.add('trash');
-
+            const btnTrash = document.createElement('button');
             const iconTrash = document.createElement('i');
-            iconTrash.classList.add('far');
+            btnTrash.classList.add('trash');
+            iconTrash.classList.add('fa');
             iconTrash.classList.add('fa-trash-alt');
-            elBtnTrash.appendChild(iconTrash);
+            btnTrash.appendChild(iconTrash);
+            elDivBtnConfig.appendChild(btnTrash);
+            
+            const btnRed = document.createElement('button');
+            btnRed.classList.add('red');
+            elDivBtnConfig.appendChild(btnRed);
 
-            elDivBtnConfig.appendChild(elBtnTrash);
+            const btnGreen = document.createElement('button');
+            btnGreen.classList.add('green');
+            elDivBtnConfig.appendChild(btnGreen);
 
-            const elBtnRed = document.createElement('button');
-            elBtnRed.classList.add('red');
-            elDivBtnConfig.appendChild(elBtnRed);
+            const btnBlue = document.createElement('button');
+            btnBlue.classList.add('blue');
+            elDivBtnConfig.appendChild(btnBlue);
 
-            const elBtnGreen= document.createElement('button');
-            elBtnGreen.classList.add('green');
-            elDivBtnConfig.appendChild(elBtnGreen);
+            const btnYellow = document.createElement('button');
+            btnYellow.classList.add('yellow');
+            elDivBtnConfig.appendChild(btnYellow);
 
-            const elBtnBlue = document.createElement('button');
-            elBtnBlue.classList.add('blue');
-            elDivBtnConfig.appendChild(elBtnBlue);
+            function colorsNotePad() {
+                btnRed.addEventListener('click', function() {
+                    elDivPostIt.style.backgroundColor = '#8a1414';
+                });
 
-            const elBtnYellow = document.createElement('button');
-            elBtnYellow.classList.add('yellow');
-            elDivBtnConfig.appendChild(elBtnYellow);
+                btnGreen.addEventListener('click', function() {
+                    elDivPostIt.style.backgroundColor = '#3c6510';
+                });
 
-            const textContentNotePad = elTextNotePad.value;
-            const elNotePad = document.createElement('p');
-            elNotePad.classList.add('notes');
-            elNotePad.textContent = textContentNotePad;
-            elDivPostIt.appendChild(elNotePad);
+                btnBlue.addEventListener('click', function() {
+                    elDivPostIt.style.backgroundColor = '#0d3e7b';
+                });
 
-            function _btnConfigOn() {
-                elNotePad.addEventListener('click', function() {
+                btnYellow.addEventListener('click', function() {
+                    elDivPostIt.style.backgroundColor = '#d6ab0a';
+                });
+            }
+
+            function _configNotePad() {
+                elDivPostIt.addEventListener('click', function() {
                     elDivBtnConfig.classList.toggle('--is-visible');
                 })
             }
 
-            function _removeContainerNotes() {
-                elBtnTrash.addEventListener('click', function() {
-                    elDivPostIt.remove('post-it');
-                })
+            function _notesSave() {
+                const note = elTextNotePad.value;
+                elDivPostIt.value = note;
             }
 
-            function _btnChangeColor() {
-                elBtnRed.addEventListener('click', function() {
-                    elDivPostIt.style.backgroundColor = '#8a1414';
-                })
-
-                elBtnGreen.addEventListener('click', function() {
-                    elDivPostIt.style.backgroundColor = '#3c6510';
-                })
-
-                elBtnBlue.addEventListener('click', function() {
-                    elDivPostIt.style.backgroundColor = '#0d3e7b';
-                })
-
-                elBtnYellow.addEventListener('click', function() {
-                    elDivPostIt.style.backgroundColor = '#cea405';
+            function _removeNote() {
+                btnTrash.addEventListener('click', function() {
+                    containerNotePad.remove();
                 })
             }
-
-            _btnConfigOn();
-            _removeContainerNotes();
-            _btnChangeColor();
+            colorsNotePad();
+            _notesSave();
+            _configNotePad();
+            _removeNote();
         })
     }
 
+
     function init() {
-        DrawNotepad();
-        
+        _drawNotepad();
     }
 
     return {

@@ -78,14 +78,27 @@ main .btn-save {
     padding: 20px 40px;
 }
 
+textarea.post-it {
+    background-color: #8a1414;
+    border-radius: 15px;
+    color: #000;
+    font-size: 50px;
+    margin: 20px 0;
+    padding: 30px;
+    text-align: justify;
+    width: 840px;
+}
+
 .container-notes .post-it {
     background-color: #8a1414;
     border-radius: 12px;
     color: #000;
     font-size: 50px;
-    margin: 90px 0;
+    height: 100px;
+    margin: 50px 25px;
     padding: 50px 50px;
     text-align: justify;
+    width: 15em;
 }
 
 .container-notes .btn-config-post-it {
@@ -103,11 +116,11 @@ main .btn-save {
     border: 10px solid #8a888c;
     border-radius: 50%;
     font-size: 40px;
-    left: 715px;
+    left: 765px;
     padding: 30px;
     position: absolute;
-    top: -30px;
-}
+    top: -240px;
+} 
 
 .btn-config-post-it .red {
     background-color: #8a1414;
@@ -115,8 +128,8 @@ main .btn-save {
     border-radius: 50%;
     padding: 40px;
     position: absolute;
-    left: 610px;
-    top: -15px;
+    left: 660px;
+    top: -220px;
 }
 
 .btn-config-post-it .green {
@@ -125,8 +138,8 @@ main .btn-save {
     border-radius: 50%;
     padding: 40px;
     position: absolute;
-    left: 505px;
-    top: -16px;
+    left: 555px;
+    top: -220px;
 }
 
 .btn-config-post-it .blue {
@@ -135,20 +148,20 @@ main .btn-save {
     border-radius: 50%;
     padding: 40px;
     position: absolute;
-    left: 400px;
-    top: -16px;
+    left: 450px;
+    top: -220px;
 } 
 
 .btn-config-post-it .yellow {
-    background-color: #cea405;
+    background-color: #d6ab0a;
     border: 10px solid #806502;
     border-radius: 50%;
     padding: 40px;
     position: absolute;
-    left: 295px;
-    top: -16px;
+    left: 345px;
+    top: -220px;
 } 
 
-p.notes {
+/* p.notes {
     padding: 20px;
-}
+} */
